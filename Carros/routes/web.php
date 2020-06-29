@@ -13,8 +13,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+ Route::get('/', function () {
     return view('welcome');
 });
+ 
+
 Route::get('modelos/{id}', 'Showcliente@get_modelos');
-Route::get('cliente/{id}', 'Showmodelos@get_cliente');
+//Route::get('cliente/{id}', 'Showmodelos@get_cliente');
+
+
+Route::get('new/modelos', function () {
+        return view('pages.createModelos');
+       });  
+     
+
+//Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/test', function () {
+    return view('pages.login');
+  
+})->middleware('auth');;
+
