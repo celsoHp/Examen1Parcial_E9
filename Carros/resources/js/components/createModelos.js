@@ -11,7 +11,7 @@ export default class CreateModelos extends Component {
             selectedmodelos:{ id: 0, Modelo:'', description:'', Proveedor:'', color:'' },
             openModal: false,
             modelos: []
-          
+        
         }
         this.editItem = this.editItem.bind(this);
         this.colseModal = this.colseModal.bind(this);
@@ -21,7 +21,7 @@ export default class CreateModelos extends Component {
 
         console.log( "The state ", this.state );
    
-
+    
     }
 
    deleteItem(modelos){

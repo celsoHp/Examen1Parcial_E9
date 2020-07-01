@@ -15,7 +15,7 @@ require('./bootstrap');
 require('./components/Example');
 
 require('./components/createModelos');
-require('./components/login');
+//require('./components/login');
 
 
 //require('./components/example');
