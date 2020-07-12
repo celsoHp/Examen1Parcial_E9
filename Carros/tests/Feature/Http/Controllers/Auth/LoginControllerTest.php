@@ -19,4 +19,20 @@ class LoginControllerTest extends TestCase
 
         $response->assertStatus(200);
     }
+    /**@test */
+    public function create_display_the_create_form()
+        {
+        $response = $this->get(route('modelos'));
+
+        $response->assertStatus(200);
+        $response->assertViewIs('auth.ShowModelos');
+    }
+       /**@test */
+       public function login_display_validation_errors()
+       {
+           $response = $this->post(route('modelos'),[]);
+   
+           $response->assertStatus(302);
+           $response->assertSessionHasErrors('ShowModelos');
+       }
 }
