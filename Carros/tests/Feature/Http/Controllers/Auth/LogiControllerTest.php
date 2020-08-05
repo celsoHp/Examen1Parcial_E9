@@ -21,7 +21,7 @@ class LogiControllerTest extends TestCase
         $response->assertStatus(200);
     }  
     /**@test */
-    public function logi_display_validation_errors()
+    public function regiter_display_validation_errors()
         {
         $response = $this->get(route('logi'),[]);
 
